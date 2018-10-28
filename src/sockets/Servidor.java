@@ -11,11 +11,17 @@ public class Servidor {
 
 	private int porta;
 	private List<Socket> clientes;
+        
+        
 
 	public Servidor(int porta) {
 		this.porta = porta;
 		this.clientes = new ArrayList<>();
 	}
+
+    Servidor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 	public void executa() throws IOException  {
 		try(ServerSocket servidor = new ServerSocket(this.porta)){
@@ -38,9 +44,9 @@ public class Servidor {
 		for (Socket cliente : this.clientes) {
 			if(!cliente.equals(clienteQueEnviou)){
 				try {
-					PrintStream ps = new PrintStream(cliente.getOutputStream());
-					//ps.println(cliente.getInetAddress().getHostAddress());
-                                        ps.println(msg);
+					PrintStream ps = new PrintStream(cliente.getOutputStream());                                        
+                                        ps.println(cliente.getInetAddress().getHostAddress() + " " + msg);
+                                        //ps.println(msg);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

@@ -59,7 +59,7 @@ public class Cliente {
                                  System.out.print("Resposta: ");
                                  resposta = teclado.next();
 				 saida.println(pergunta); //Faz o Envio                                 
-                                 System.out.println("Enviado \n");
+                                 System.out.println("\n");
                                  
                                  
                             } else if(op == 2){
