@@ -58,9 +58,9 @@ public class Cliente {
                                  //int resposta = Integer.parseInt(JOptionPane.showInputDialog("Resposta: "));
                                  System.out.print("Resposta: ");
                                  resposta = teclado.next();
-				 saida.println(pergunta); //Faz o Envio
-                                 saida.println(resposta); //Faz o Envio
-                                 Thread.sleep(10000);
+				 saida.println(pergunta); //Faz o Envio                                 
+                                 System.out.println("Enviado \n");
+                                 
                                  
                             } else if(op == 2){
                                  //int res = Integer.parseInt(JOptionPane.showInputDialog(null, "Resposta: "));
@@ -69,8 +69,7 @@ public class Cliente {
                                  saida.println(resposta); //Faz o Envio
                             }
                         }
-		} catch (InterruptedException ex) {
-                Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
-            }
+		 
 	}
+        }
 }
